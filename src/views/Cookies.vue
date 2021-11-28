@@ -8,7 +8,7 @@
           :src="require('../assets/cookiemonster.gif')"
           class="my-3"
           contain
-          height="20"
+          height="222"
         />
       </v-col>
 
@@ -24,7 +24,7 @@
 </template>
 <script>
   export default {
-    name: 'Cookie',
+    name: 'Cookies',
 
     data: () => ({
       

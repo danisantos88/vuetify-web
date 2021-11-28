@@ -25,7 +25,7 @@
 </template>
 <script>
 export default {
-  name: "Integration",
+  name: "Integrations",
 
   data: () => ({}),
 };

@@ -1,4 +1,5 @@
 <template>
+
   <v-app>
     <v-system-bar
       app
@@ -13,6 +14,7 @@
       </v-col>
     
     </v-system-bar>
+
     <v-content
       color="#fafafa"
     >
@@ -20,11 +22,7 @@
     </v-content>
     
 
-    <v-content
-      color="#fafafa"
-    >
-      <HelloWorld/>
-    </v-content>
+    <div>      <router-view></router-view></div>
     <v-footer 
       padless
       color="#f4f4f4"
@@ -60,29 +58,22 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+
 import Toolbar from './components/Toolbar';
+
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+
     Toolbar,
+
   },
 
   data () {
     return{
-      // drawer: false,
-      // items: [
-      //   { title: 'Account', icon: 'mdi-account'},
-      //   { title: 'Aliens here', icon: 'mdi-alien'},
-      //   { title: 'Cookies', icon: 'mdi-cookie'},
-      //   { title: 'Infinity', icon: 'mdi-all-inclusive'},
-      //   { title: 'Take a pic', icon: 'mdi-camera-outline'},
-      //   { title: 'Config', icon: 'mdi-cog-outline'},
-      // ],
-      // right: null,
+  
     }
   },
 };
