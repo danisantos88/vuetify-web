@@ -6,14 +6,14 @@
           :src="require('../assets/climate.gif')"
           class="my-3"
           contain
-          height="20"
+          height="150"
         />
-      </v-col>
 
-      <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3">
+        <h3 class="display-2 font-weight-bold mb-3">
           Would you like to consult the weather from anywhere in the world?
-        </h1>
+        </h3>
+      </v-col>
+    <v-col>
         <v-text-field
           label="Insert the city"
           placeholder="Type here"

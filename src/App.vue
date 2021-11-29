@@ -1,6 +1,12 @@
 <template>
-
-  <v-app>
+  <!-- <div id="app">
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view/>
+  </div> -->
+<v-app>
     <v-system-bar
       app
       height="30"
@@ -20,21 +26,21 @@
     >
       <Toolbar/>
     </v-content>
-    
 
-    <div>      <router-view></router-view></div>
-    <v-footer 
-      padless
-      color="#f4f4f4"
-
+    <v-main>
+      <router-view/>
+    </v-main>
+<v-btn
+        v-for="link in links"
+        :key="link"
+        color="white"
+        text
+        rounded
+        class="my-2"
       >
-      <v-col
-        class="text-center"
-        cols="12"
-      >
-        <strong>v-footer</strong>
-      </v-col>
-    </v-footer>
+        {{ link }}
+      </v-btn>
+     
     <v-bottom-navigation v-model="value">
       <v-btn value="recent">
         <span>Recent</span>
@@ -54,6 +60,18 @@
         <v-icon>mdi-map-marker</v-icon>
       </v-btn>
     </v-bottom-navigation>
+    <v-footer 
+      padless
+      color="#f4f4f4"
+
+      >
+      <v-col
+        class="text-right"
+        cols="12"
+      >
+        Daniele dos Santos Rosa RA 111706
+      </v-col>
+    </v-footer>
   </v-app>
 </template>
 
@@ -78,3 +96,27 @@ export default {
   },
 };
 </script>
+
+
+<style lang="scss">
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
+}
+</style>

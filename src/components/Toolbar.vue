@@ -12,7 +12,7 @@
       <v-divider></v-divider>
 
       <v-list dense nav>
-        <v-list-item v-for="item in items" :key="item.title" link>
+        <v-list-item v-for="item in items" :key="item.title" :to="item.to" link>
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
@@ -28,12 +28,14 @@
     <v-app-bar app color="#f5f5f5">
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-spacer></v-spacer>
-      <v-btn v-for="item in items" :key="item.title" link>
+      <v-btn v-for="item in items" :key="item.title" :to="item.to" link>
         <v-btn-icon>
           <v-icon>{{ item.icon }}</v-icon>
         </v-btn-icon>
       </v-btn>
     </v-app-bar>
+
+    
   </div>
 </template>
 
@@ -45,11 +47,11 @@ export default {
     return {
       drawer: false,
       items: [
-        { title: "Home", icon: "mdi-home" },
-        { title: "Account", icon: "mdi-account" },
-        { title: "Integration", icon: "mdi-wrench" },//white-balance-sunny" }, 
-        { title: "About Us", icon: "mdi-all-inclusive" },
-        { title: "Cookies", icon: "mdi-cookie" },
+        { title: "Home", icon: "mdi-home", to: '/home'},
+        { title: "Books", icon: "mdi-book", to: '/books'},
+        { title: "Integrations", icon: "mdi-wrench", to: '/integrations'},
+        { title: "Cookies", icon: "mdi-cookie", to: '/cookies'},
+        { title: "About Us", icon: "mdi-all-inclusive", to: '/about'},
       ],
       right: null,
     };
