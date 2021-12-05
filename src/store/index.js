@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import Axios from 'axios'//add axios
 
 Vue.use(Vuex)
 
@@ -95,13 +96,31 @@ export default new Vuex.Store({
                 "website":"https://doi.org/10.1007/978-1-4842-4221-6"
             }
         ],
+        //add axios
+        // cards:[
+        //     {subtitle: "Teste Cards", title: "Cards"},  
+        // ],
+        title:"Coin Rate: ",
+        events: [],
+        //end add axios
         
     },
-    mutations:{
-
+    mutations:{//add axios
+        SET_EVENTS(state, payload){
+            state.events = payload
+        }
     },
-    actions:{
-
+    actions:{//add axios
+        fetchEvents({commit}){
+            console.log("fetchEvents")
+            Axios.get('https://api.coindesk.com/v1/bpi/currentprice.json')
+            .then(response => {
+                    const payload = response.data.bpi
+                    console.log(payload)
+                    commit('SET_EVENTS',payload)
+                })
+            .catch(error=>{console.log(error)})
+        }
     },
     getters:{
         bigTitle(state){

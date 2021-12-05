@@ -5,6 +5,7 @@ import Books from '../views/Books.vue';
 import Cookies from '../views/Cookies.vue';
 import Home from '../views/Home.vue';
 import Integrations from '../views/Integrations.vue';
+import Cards from '@/components/Cards'
 
 Vue.use(VueRouter);
 
@@ -35,6 +36,16 @@ const routes = [
         component: Integrations
     },
     {
+        path: '/coins',
+        name: 'Coins',
+        component: () => import('../views/Coins.vue')
+    },
+    {
+        path: '/coins/:cardid',
+        name: 'Cards',
+        component: Cards
+    },
+    {
         path: '/',
         redirect: '/home'
     }
@@ -50,9 +61,9 @@ const routes = [
 // ]
 
 const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes
 })
 
 export default router

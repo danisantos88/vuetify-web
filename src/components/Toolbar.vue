@@ -49,6 +49,7 @@ export default {
       items: [
         { title: "Home", icon: "mdi-home", to: '/home'},
         { title: "Books", icon: "mdi-book", to: '/books'},
+        { title: "Coins", icon: "mdi-cash-multiple", to: '/coins'},
         { title: "Integrations", icon: "mdi-wrench", to: '/integrations'},
         { title: "Cookies", icon: "mdi-cookie", to: '/cookies'},
         { title: "About Us", icon: "mdi-all-inclusive", to: '/about'},
