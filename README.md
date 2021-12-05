@@ -21,6 +21,9 @@ npm run lint
 ```
 ### 📷 Printscreens
 
+This is the Coins Page, made for the AF3:
+![image](https://user-images.githubusercontent.com/39888852/144762381-6db0e8ff-7ccd-454e-bd4a-d2ac98421601.png)
+
 This is the final home page:
 ![image](https://user-images.githubusercontent.com/39888852/143793578-7050220a-fdeb-4d37-8bd9-d00c50720aaf.png)
 
